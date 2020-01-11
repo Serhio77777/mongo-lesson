@@ -4,14 +4,10 @@ const connection = mongoose.connect('mongodb://localhost:27017/test', {useNewUrl
 const qwertyScheme = mongoose.Schema({
   title: String,
   author: String,
-  body: String,
-  comments: [{ body: String }],
-  date: { type: Date, default: Date.now },
-  hidden: Boolean,
-  meta: {
-    votes: Number,
-    favs: Number
-  }
+  year: String,
+  pages: Number,
+  comment: String,
+  date: { type: Date, default: Date.now }
 });
 
 const Qwerty = mongoose.model('Qwerty', qwertyScheme);
